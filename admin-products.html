@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="stylesheet" href="admin.css"> 
+  </head> 
+<body>
+  <div class="admin-wrapper">
+    <!--Header-->
+    <header>
+    <nav class = navbar-section-content>
+      <a href="#" class="nav-logo">
+        <h2 class="logo-text">🍰 SweetBite</h2>
+      </a>
+
+      <ul class="nav-menu"> 
+            <button id="menu-close-button" class="fas fa-times"></button>
+        <li class="nav-item"> 
+            <a href="#home" class="nav-link">Home</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#about" class="nav-link">About Us</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#menu" class="nav-link">Menu</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#testimonials" class="nav-link">Testimonials</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#contact" class="nav-link">Contact</a> 
+          </li>
+      </ul>
+    </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <h2 class="admin-logo">🍰 SweetBite</h2>
+      <ul class="admin-menu">
+        <li><a href="#">Dashboard</a></li>
+        <li class="active"><a href="#">Products</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Users</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-content">
+      <div class="admin-header">
+        <h1>Products</h1>
+        <button class="btn-add">+ Add Product</button>
+      </div>
+
+      <section class="admin-table">
+        <table>
+          <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price (RM)</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><img src="images/chocolate-cake.jpg"></td>
+            <td>Chocolate Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Rich and moist chocolate cake topped with creamy chocolate frosting.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/Red-Velvet.png"></td>
+            <td>Red Velvet Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Rich and moist red velvet cake topped with cream cheese frosting.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/Cheesecake.png"></td>
+            <td>Chocolate Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Rich and moist Japanese cheese cake with a light and airy texture.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/Strawberry-shortcake.png"></td>
+            <td>Chocolate Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Fresh strawberries layered with a light and airy cake base.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/Blackforest-Cake.png"></td>
+            <td>Chocolate Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Rich and moist blackforest cake with a light and airy texture.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/Blueberry-Chocolate-Cake.png"></td>
+            <td>Chocolate Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Rich and moist blueberry chocolate cake with a light and airy texture.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+            <td><img src="images/chocolate-cake.jpg"></td>
+            <td>Chocolate Cake</td>
+            <td>Cake</td>
+            <td>25.00</td>
+            <td>Rich and moist chocolate cake topped with creamy chocolate frosting.</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+        <!-- Modal -->
+      <div id="productModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Add New Product</h2>
+          <form id="addProductForm">
+            <label>Name:</label>
+            <input type="text" id="productName" required>
+
+            <label>Category:</label>
+            <select id="productCategory" required>
+              <option value="Cake">Cake</option>
+              <option value="Pastry">Pastry</option>
+            </select>
+
+            <label>Price:</label>
+            <input type="number" id="productPrice" required>
+
+            <label>Image URL:</label>
+            <input type="text" id="productImage" required>
+
+            <button type="submit" class="btn-add">Save Product</button>
+          </form>
+      </div>
+      </div>
+      </section>
+
+      <!-- Linking Custom JS -->
+    <script src="admin.js"></script>
+    </main>
+  </div>
+</body>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <!-- Linking Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <div class="wrapper">
+    <!--Header / NavBar -->
+    <header>
+      <nav class="navbar section-content">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">🍰 SweetBite</h2>
+        </a>
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav-search-filter">
+          <!-- Search Bar -->
+          <input type="text" id="searchInput" placeholder="Search menu..." />
+
+          <!-- Filter Dropdown -->
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="cake">Cake</option>
+            <option value="pastry">Pastry</option>
+          </select>
+        </div>
+
+        <div class="nav-action">
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-user"></a>
+          <button id="menu-open-button" class="fas fa-bars"></button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Your Cart Section -->
+      <section class="cart-section">
+        <div class="section-content">
+          <h1 class="cart-title">Your Cart</h1>
+
+          <table>
+            <tr>
+              <th>No</th>
+              <th>Product</th>
+              <th>Details</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><img src="images/chocolate-cake.jpg" alt="Cake">
+                Chocolate Cake
+              </td>
+              <td>
+                Size:Medium <br>
+                Message: Happy Birthday
+              </td>
+              <td>1</td>
+              <td>RM 500.00</td>
+              <td><button>Remove</button></td>
+            </tr>
+          </table>
+        </div>   
+      </section>
+
+      <!--Footer Section-->
+        <footer class="footer-section">
+          <div class="section-content">
+            <p class="copyright-text">&copy; 2024 SweetBite. All rights reserved.</p>
+
+            <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <div class="policy-links">
+              <a href="#">Privacy Policy</a>
+              <span class="separator">|</span>
+              <a href="#">Terms of Service</a>
+              <span class="separator">|</span>
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+        </footer>
+    </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

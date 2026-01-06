@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset = "UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SweetBite | PROJECT CAT201</title> 
+    <!-- Linking Font Awesome for icons -->
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <!--Linking Swiper CSS -->
+    <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css"> 
+  </head> 
+  <body> 
+    <!--Header / NavBar -->
+    <header> 
+      <nav class="navbar section-content"> 
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">🍰 SweetBite</h2>
+        </a>
+        <ul class="nav-menu"> 
+            <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item"> 
+            <a href="#home" class="nav-link">Home</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#about" class="nav-link">About Us</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#menu" class="nav-link">Menu</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#testimonials" class="nav-link">Testimonials</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#contact" class="nav-link">Contact</a> 
+          </li>
+        </ul>
+
+        <div class="nav-search-filter">
+          <!-- Search Bar -->
+          <input type="text" id="searchInput" placeholder="Search menu...">
+    
+          <!-- Filter Dropdown -->
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="cake">Cake</option>
+            <option value="pastry">Pastry</option>
+          </select>
+        </div>  
+
+        <div class="nav-action">
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-user"></a>
+          <button id="menu-open-button" class="fas fa-bars"></button>
+        </div>
+      </nav> 
+    </header> 
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class ="section-content">
+          <div class="hero-details">
+            <h2 class="title">Welcome to SweetBite</h2>
+            <h3 class="subtitle">Your favorite bakery for all your sweet treats!</h3>
+            <p class="descriptions">We offer a wide variety of delicious pastries, cakes, and cookies made with the finest ingredients.</p>
+            <div class="buttons">
+              <a href="#" class="button order-now">Order Now</a>
+              <a href="#" class="button contact-us">Contact Us</a>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <img src="images/cake-hero-section.png" alt="Hero" class="hero-image">
+          <div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+       <section class="about-section" id="about">
+        <div class="section-content">
+          <div class="about-image-wrapper">
+            <img src="images/about-image.jpg" alt="About" class="about-image">
+          </div>
+          <div class="about-details">
+            <h2 class="section-title">About Us</h2>
+            <p class="text">At SweetBite, we are passionate about baking and creating delightful treats that bring joy to our customers. Our skilled bakers use traditional recipes combined with modern techniques to craft a variety of baked goods that cater to all tastes.
+            </p>
+            <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Section -->
+        <section class="menu-section" id="menu" >
+          <h2 class="section-title">Our Menu</h2>
+          <div class="section-content">
+            <ul class="menu-list">
+              <h2 class="menu-title">Cake</h2>
+              <li class="menu-item" id="chocolate-cake" data-category="cake">
+                <img src="images/chocolate-cake.jpg" alt="Cake" class="menu-image">
+                <h3 class="name">Chocolate Cake</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist chocolate cake topped with creamy chocolate frosting.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="red-velvet" data-category="cake">
+                <img src="images/Red-Velvet.png" alt="Cake" class="menu-image">
+                <h3 class="name">Red Velvet Cake</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist red velvet cake topped with cream cheese frosting.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="japanese-cheesecake" data-category="cake">
+                <img src="images/Cheesecake.png" alt="Cake" class="menu-image">
+                <h3 class="name">Japanese Cheesecake</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist Japanese cheese cake with a light and airy texture.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="strawberry-shortcake" data-category="cake">
+                <img src="images/Strawberry-shortcake.png" alt="Cake" class="menu-image">
+                <h3 class="name">Strawberry ShortCake</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Fresh strawberries layered with a light and airy cake base.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="blackforest-cake" data-category="cake">
+                <img src="images/Blackforest-Cake.png" alt="Cake" class="menu-image">
+                <h3 class="name">Blackforest Cake</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist blackforest cake with a light and airy texture.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id ="blueberry-chocolate-cake "data-category="cake">
+                <img src="images/Blueberry-Chocolate-Cake.png" alt="Cake" class="menu-image">
+                <h3 class="name">Blueberry Chocolate Cake</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist blueberry chocolate cake with a light and airy texture.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+
+              <h2 class="menu-title">Pastry</h2>
+              <li class="menu-item" id="croissant" data-category="pastry">
+                <img src="images/Croissant.png" alt="Pastry" class="menu-image">
+                <h3 class="name">Croissant</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist chocolate cake topped with creamy chocolate frosting.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="chicken-and-mushroom-pie" data-category="pastry">
+                <img src="images/Chicken&Mushroom-Pie.png" alt="Pastry" class="menu-image">
+                <h3 class="name">Chicken & Mushroom Pie</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Crunched chicken and mushroom filling in a flaky pastry crust.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id= "cinnamon-raisin-roll" data-category="pastry">
+                <img src="images/Cinnamon-Raisin-Roll.png" alt="Pastry" class="menu-image">
+                <h3 class="name">Cinnamon Raisin Roll</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Soft and fluffy cinnamon raisin roll with a sweet and aromatic flavor.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="cream-puff" data-category="pastry">
+                <img src="images/Cream-puff.png" alt="Pastry" class="menu-image">
+                <h3 class="name">Cream Puff</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Light and airy cream puff with a sweet and aromatic flavor.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="egg-tart" data-category="pastry">
+                <img src="images/Egg-Tart.png" alt="Pastry" class="menu-image">
+                <h3 class="name">Egg Tart</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Delicious egg tart with a flaky pastry crust and creamy custard filling.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+              <li class="menu-item" id="brownie" data-category="pastry">
+                <img src="images/Brownie.png" alt="Cake" class="menu-image">
+                <h3 class="name">Brownie</h3>
+                <p class="price">RM 25.00</p>
+                <p class="text">Rich and moist chocolate brownie with a fudgy center.</p>
+                <div class="product-actions">
+                  <a href="#" class="btn view-btn">View</a>
+                  <a href="#" class="btn customize-btn">Customize</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      <!--Testimonials Section -->
+      <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="section-content">
+          <div class="slider-container swiper">
+            <div class="slider-wrapper">
+              <ul class="testimonial-list swiper-wrapper">
+                  <li class="testimonial swiper-slide">
+                    <img src="images/Customer-1.jpg" alt="User" class="User-image">
+                    <h3 class="name">Alice Johnson</h3>
+                    <i class="feedback">"The cakes from SweetBite are absolutely delicious! The chocolate cake is my favorite."</i>
+                  </li>
+                  <li class="testimonial swiper-slide">
+                    <img src="images/Customer-2.jpg" alt="User" class="User-image">
+                    <h3 class="name">Alice Johnson</h3>
+                    <i class="feedback">"Will come again."</i>
+                  </li>
+              <li class="testimonial swiper-slide">
+                    <img src="images/Customer-3.jpg" alt="User" class="User-image">
+                    <h3 class="name">Alice Johnson</h3>
+                    <i class="feedback">"Lovely cakes and great service!"</i>
+                  </li>
+              <li class="testimonial swiper-slide">
+                    <img src="images/Customer-4.jpg" alt="User" class="User-image">
+                    <h3 class="name">Alice Johnson</h3>
+                    <i class="feedback">"This is a great place for cakes!"</i>
+                  </li>
+              <li class="testimonial swiper-slide">
+                    <img src="images/Customer-5.jpg" alt="User" class="User-image">
+                    <h3 class="name">Alice Johnson</h3>
+                    <i class="feedback">"The best cakes I've ever tasted!"</i>
+                  </li>
+              </ul>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+
+       <!--Contact Section-->
+       <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="section-content">
+          <ul class="contact-ifo-list">
+            <li class="contact-info">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <p>123 Campsite Avenue, Wilderness, CA 98765</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-regular fa-envelope"></i>
+              <p>SweetBite@gmail.com</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-phone"></i>
+              <p>456-78909</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-regular fa-clock"></i>
+              <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-regular fa-clock"></i>
+              <p>Sunday: Closed</p>
+            </li>
+          </ul>
+
+          <form action="#" class="contact-form">
+            <input type="text" class="input-field" placeholder="Your Name" required>
+            <input type="email" class="input-field" placeholder="Your Email" required>
+            <textarea class="input-field" placeholder="Your Message" required></textarea>
+            <button class="button submit-button">Submit</button>
+        </div> 
+
+        <!--Footer Section-->
+        <footer class="footer-section">
+          <div class="section-content">
+            <p class="copyright-text">&copy; 2024 SweetBite. All rights reserved.</p>
+
+            <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <div class="policy-links">
+              <a href="#">Privacy Policy</a>
+              <span class="separator">|</span>
+              <a href="#">Terms of Service</a>
+              <span class="separator">|</span>
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+        </footer>
+    </main>
+
+    <!-- Linking Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Linking Custom JS -->
+    <script src="script.js"></script>
+  </body> 
+  </html>

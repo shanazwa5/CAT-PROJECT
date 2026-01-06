@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="stylesheet" href="admin.css"> 
+  </head> 
+  <body>
+  <div class="admin-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <h2 class="logo">🍰 SweetBite</h2>
+      <ul>
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="admin-products.html">Products</a></li>
+        <li><a href="admin-orders.html">Orders</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-content">
+
+      <h1>Dashboard</h1>
+
+      <!-- Summary Cards -->
+      <section class="dashboard-cards">
+        <div class="card">Total Products</div>
+        <div class="card">Total Orders</div>
+        <div class="card">Revenue</div>
+        <div class="card">Pending Orders</div>
+      </section>
+
+      <!-- Recent Orders -->
+      <section class="recent-orders">
+        <h2>Recent Orders</h2>
+        <table>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+        </table>
+      </section>
+
+    </main>
+
+  </div>
+</body>

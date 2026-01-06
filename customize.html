@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css"> 
+  </head> 
+  <body> 
+    <!--Header / NavBar -->
+    <header> 
+      <nav class="navbar section-content"> 
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">🍰 SweetBite</h2>
+        </a>
+        <ul class="nav-menu"> 
+            <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item"> 
+            <a href="#home" class="nav-link">Home</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#about" class="nav-link">About Us</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#menu" class="nav-link">Menu</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#testimonials" class="nav-link">Testimonials</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="#contact" class="nav-link">Contact</a> 
+          </li>
+        </ul>
+
+        <div class="nav-search-filter">
+          <!-- Search Bar -->
+          <input type="text" id="searchInput" placeholder="Search menu...">
+    
+          <!-- Filter Dropdown -->
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="cake">Cake</option>
+            <option value="pastry">Pastry</option>
+          </select>
+        </div>  
+
+        <div class="nav-action">
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-user"></a>
+          <button id="menu-open-button" class="fas fa-bars"></button>
+        </div>
+      </nav> 
+    </header> 
+    <main>
+
+    <!-- Customize Section -->
+    <section class="customize-section">
+      <div class="section-content">
+        <h1 class="customize-title">Customize Your Cake</h1>
+
+        <div class="customize-container">
+          <div class="cake-image">
+            <img src="images/chocolate-cake.jpg" alt="Cake">
+          </div>
+          <div class="cake-details">
+            <h2 class="cake-name">Chocolate Cake</h2>
+            <h2 class="cake-price">RM 200</h2>
+            <p class="cake-description">Rich and moist chocolate cake...</p>
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+              <option value="small">Small (6 inches)</option>
+              <option value="medium">Medium (8 inches)</option>
+              <option value="large">Large (10 inches)</option>
+            </select>
+
+            <label for="decorations">Decorations:</label>
+            <input type="text" id="decorations" name="decorations" placeholder="e.g., sprinkles, fruit">
+
+            <label for="candles">Number of Candles</label>
+            <select id="candles" name="candles">
+              <option number="2">1</option>
+              <option number="2">2</option>
+              <option number="3">3</option>
+              <option number="4">4</option>
+              <option number="5">5</option>
+              <option number="6">6</option>
+              <option number="7">7</option>
+              <option number="8">8</option>
+              <option number="3">9</option>
+              <option number="10">10</option>
+            </select>
+
+            <label for="message">Message to put on the cake:</label>
+            <textarea type="text" id="message" name="message" placeholder="e.g., Happy Birthday!"></textarea>
+
+            <button type="button" class="btn">Add To Cart</button>
+          
+        </div>
+      </div>  
+    </section>
+    </main>      
+
+     <!--Footer Section-->
+        <footer class="footer-section">
+          <div class="section-content">
+            <p class="copyright-text">&copy; 2024 SweetBite. All rights reserved.</p>
+
+            <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <div class="policy-links">
+              <a href="#">Privacy Policy</a>
+              <span class="separator">|</span>
+              <a href="#">Terms of Service</a>
+              <span class="separator">|</span>
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+        </footer>
+
+          
+
+      <script src="customize.js"></script>
+      </body>
+</html>
