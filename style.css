@@ -753,7 +753,7 @@ body {
 }
 
 main {
-  flex: 1; /* This is the magic line - it pushes the footer down */
+  flex: 1; 
   display: flex;
   flex-direction: column;
 }
@@ -813,4 +813,88 @@ main {
 
 .cart-section table td button:hover {
   background-color: #3b141c;
+}
+
+/*Payment Page Styling*/
+.payment-content {
+  padding: 100px;
+  font-family: sans-serif;
+}
+
+.payment-content h1 {
+  font-family: "Miniver"; 
+  margin-bottom: 30px;
+}
+
+.payment-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-summary th,
+.payment-summary td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.payment-form {
+  margin-top: 30px;
+}
+
+.payment-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.payment-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 20px 80px;
+}
+
+.payment-content {
+  padding: 100px 0;
+  font-family: sans-serif;
+}
+
+.payment-content h1 {
+  font-family: "Miniver";
+  margin-bottom: 30px;
+}
+
+.footer-section {
+ position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
 }

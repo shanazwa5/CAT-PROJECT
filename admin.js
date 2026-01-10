@@ -1,56 +1,70 @@
-// Get modal elements
-const modal = document.getElementById("productModal");
-const btnAdd = document.getElementById("btnAddProduct");
-const spanClose = document.querySelector(".close");
-const form = document.getElementById("addProductForm");
-const tableBody = document.querySelector(".admin-table tbody");
+// --- Modal Open/Close ---
+var modal = document.getElementById("productModal");
+var btn = document.getElementById("btnAddProduct");
+var span = document.getElementsByClassName("close")[0];
 
-// Open modal
-btnAdd.onclick = () => {
+btn.onclick = function () {
   modal.style.display = "block";
 };
 
-// Close modal
-spanClose.onclick = () => {
+span.onclick = function () {
   modal.style.display = "none";
 };
 
-// Close modal when click outside content
-window.onclick = (e) => {
-  if (e.target == modal) {
+window.onclick = function (event) {
+  if (event.target == modal) {
     modal.style.display = "none";
   }
 };
 
-// Handle form submit
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // stop reload
+// --- Add Product to table ---
+var form = document.getElementById("addProductForm");
+var tableBody = document.querySelector(".admin-table tbody");
 
-  // Get input values
-  const name = document.getElementById("productName").value;
-  const category = document.getElementById("productCategory").value;
-  const price = document.getElementById("productPrice").value;
-  const image = document.getElementById("productImage").value;
+form.onsubmit = function (e) {
+  e.preventDefault();
 
-  // Create new table row
-  const newRow = document.createElement("tr");
-  newRow.innerHTML = `
-    <td><img src="${image}" alt="${name}" width="60"></td>
-    <td>${name}</td>
-    <td>${category}</td>
-    <td>${price}</td>
-    <td>
-      <button class="edit">Edit</button>
-      <button class="delete">Delete</button>
-    </td>
-  `;
+  var name = document.getElementById("productName").value;
+  var category = document.getElementById("productCategory").value;
+  var price = document.getElementById("productPrice").value;
+  var image = document.getElementById("productImage").value;
+  var description = "-"; // simple placeholder
 
-  // Append row to table
-  tableBody.appendChild(newRow);
+  var row = tableBody.insertRow(); // add new row at end
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
 
-  // Clear form
+  cell1.innerHTML = '<img src="' + image + '" width="60">';
+  cell2.innerText = name;
+  cell3.innerText = category;
+  cell4.innerText = parseFloat(price).toFixed(2);
+  cell5.innerText = description;
+  cell6.innerHTML =
+    '<button class="edit">Edit</button> <button class="delete">Delete</button>';
+
+  // --- Edit button ---
+  cell6.querySelector(".edit").onclick = function () {
+    document.getElementById("productName").value = name;
+    document.getElementById("productCategory").value = category;
+    document.getElementById("productPrice").value = price;
+    document.getElementById("productImage").value = image;
+    modal.style.display = "block";
+
+    // Remove row first, will re-add after submit
+    tableBody.deleteRow(row.rowIndex - 1);
+  };
+
+  // --- Delete button ---
+  cell6.querySelector(".delete").onclick = function () {
+    if (confirm("Are you sure you want to delete this product?")) {
+      tableBody.deleteRow(row.rowIndex - 1);
+    }
+  };
+
   form.reset();
-
-  // Close modal
   modal.style.display = "none";
-});
+};

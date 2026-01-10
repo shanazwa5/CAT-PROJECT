@@ -9,51 +9,35 @@
     <link rel="stylesheet" href="admin.css"> 
   </head> 
 <body>
-  <div class="admin-wrapper">
     <!--Header-->
     <header>
-    <nav class = navbar-section-content>
+    <!-- Header -->
+     <nav class="navbar">
       <a href="#" class="nav-logo">
         <h2 class="logo-text">🍰 SweetBite</h2>
       </a>
-
-      <ul class="nav-menu"> 
-            <button id="menu-close-button" class="fas fa-times"></button>
-        <li class="nav-item"> 
-            <a href="#home" class="nav-link">Home</a> 
-          </li> 
-          <li class="nav-item"> 
-            <a href="#about" class="nav-link">About Us</a> 
-          </li> 
-          <li class="nav-item"> 
-            <a href="#menu" class="nav-link">Menu</a> 
-          </li> 
-          <li class="nav-item"> 
-            <a href="#testimonials" class="nav-link">Testimonials</a> 
-          </li> 
-          <li class="nav-item"> 
-            <a href="#contact" class="nav-link">Contact</a> 
-          </li>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="admin-dashboard.html" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="admin-products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="admin-order.html" class="nav-link">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Logout</a>
+        </li>
       </ul>
-    </nav>
+      </nav>
     </header>
-
-    <!-- Sidebar -->
-    <aside class="admin-sidebar">
-      <h2 class="admin-logo">🍰 SweetBite</h2>
-      <ul class="admin-menu">
-        <li><a href="#">Dashboard</a></li>
-        <li class="active"><a href="#">Products</a></li>
-        <li><a href="#">Orders</a></li>
-        <li><a href="#">Users</a></li>
-      </ul>
-    </aside>
 
     <!-- Main Content -->
     <main class="admin-content">
       <div class="admin-header">
         <h1>Products</h1>
-        <button class="btn-add">+ Add Product</button>
+        <button id="btnAddProduct" class="btn-add">+ Add Product</button>
       </div>
 
       <section class="admin-table">
@@ -166,8 +150,8 @@
             <label>Price:</label>
             <input type="number" id="productPrice" required>
 
-            <label>Image URL:</label>
-            <input type="text" id="productImage" required>
+            <label>Image File:</label>
+            <input type="file" id="productImageFile" accept="image/png, image/jpeg">
 
             <button type="submit" class="btn-add">Save Product</button>
           </form>
@@ -175,8 +159,8 @@
       </div>
       </section>
 
-      <!-- Linking Custom JS -->
-    <script src="admin.js"></script>
     </main>
+    <!-- Linking Custom JS -->
+    <script src="admin.js"></script>
   </div>
 </body>

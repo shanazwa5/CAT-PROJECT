@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customize</title>
+    <title>Checkout</title>
     <!-- Linking Font Awesome for icons -->
     <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
     <link rel="stylesheet" href="style.css"> 
@@ -48,62 +48,79 @@
         </div>  
 
         <div class="nav-action">
-          <a href="#" class="fas fa-shopping-cart"></a>
-          <a href="#" class="fas fa-user"></a>
+          <a href="YourCart.html" class="fas fa-shopping-cart"></a>
+          <a href="login.html" class="fas fa-user"></a>
           <button id="menu-open-button" class="fas fa-bars"></button>
         </div>
       </nav> 
     </header> 
-    <main>
+<main class="content-wrapper">
+    <!--Payment Section-->
+    <div class="payment-content">
+  <div class="payment-header">
+    <h1>Checkout</h1>
+  </div>
 
-    <!-- Customize Section -->
-    <section class="customize-section">
-      <div class="section-content">
-        <h1 class="customize-title">Customize Your Cake</h1>
+  <section class="payment-summary">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price (RM)</th>
+          <th>Total (RM)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chocolate Cake</td>
+          <td>1</td>
+          <td>25.00</td>
+          <td>25.00</td>
+        </tr>
+        <tr>
+          <td>Red Velvet Cake</td>
+          <td>2</td>
+          <td>25.00</td>
+          <td>50.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3"><strong>Total Amount</strong></td>
+          <td><strong>75.00</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
 
-        <div class="customize-container">
-          <div class="cake-image">
-            <img src="images/chocolate-cake.jpg" alt="Cake">
-          </div>
-          <div class="cake-details">
-            <h2 class="cake-name">Chocolate Cake</h2>
-            <h2 class="cake-price">RM 200</h2>
-            <p class="cake-description">Rich and moist chocolate cake...</p>
-            <label for="size">Size:</label>
-            <select id="size" name="size">
-              <option value="small">Small (6 inches)</option>
-              <option value="medium">Medium (8 inches)</option>
-              <option value="large">Large (10 inches)</option>
-            </select>
+  <section class="payment-form">
+    <h2>Payment Details</h2>
+    <form id="paymentForm" action="CreateOrderServlet" method="post">
 
-            <label for="decorations">Decorations:</label>
-            <input type="text" id="decorations" name="decorations" placeholder="e.g., sprinkles, fruit">
+        <input type="hidden" name="orderType" value="delivery">
 
-            <label for="candles">Number of Candles</label>
-            <select id="candles" name="candles">
-              <option number="2">1</option>
-              <option number="2">2</option>
-              <option number="3">3</option>
-              <option number="4">4</option>
-              <option number="5">5</option>
-              <option number="6">6</option>
-              <option number="7">7</option>
-              <option number="8">8</option>
-              <option number="3">9</option>
-              <option number="10">10</option>
-            </select>
+        <input type="hidden" name="productId" value="101">
+        <input type="hidden" name="price" value="25.00">
+        <input type="hidden" name="quantity" value="1">
 
-            <label for="message">Message to put on the cake:</label>
-            <textarea type="text" id="message" name="message" placeholder="e.g., Happy Birthday!"></textarea>
+        <label>Cardholder Name:</label>
+        <input type="text" required>
 
-            <button type="button" class="btn">Add To Cart</button>
-          
-        </div>
-      </div>  
+        <label>Card Number:</label>
+        <input type="text" maxlength="16" required>
+
+        <label>Expiry Date:</label>
+        <input type="month" required>
+
+        <label>CVV:</label>
+        <input type="text" maxlength="3" required>
+
+        <button type="submit">Pay Now</button>
+    </form>
     </section>
-    </main>      
-
-     <!--Footer Section-->
+    
+    <!--Footer Section-->
         <footer class="footer-section">
           <div class="section-content">
             <p class="copyright-text">&copy; 2024 SweetBite. All rights reserved.</p>
@@ -123,9 +140,9 @@
             </div>
           </div>
         </footer>
+    </main>
+    </div>
 
-          
-
-      <script src="customize.js"></script>
-      </body>
+    <script src="script.js"></script>
+  </body>
 </html>

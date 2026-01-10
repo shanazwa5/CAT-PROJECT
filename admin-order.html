@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Product Management</title>
     <!-- Linking Font Awesome for icons -->
     <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
     <link rel="stylesheet" href="admin.css"> 
   </head> 
   <body>
+    <!--Header-->
     <header>
     <!-- Header -->
      <nav class="navbar">
@@ -32,12 +33,7 @@
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="admin-content">
-
-      <h1>Dashboard</h1>
-
-      <!-- Summary Cards -->
+    <!-- Order Cards -->
       <section class="dashboard-cards">
         <div class="card">
           <p>Total Products</p>
@@ -57,21 +53,53 @@
         </div>
       </section>
 
-      <!-- Recent Orders -->
-      <section class="recent-orders">
-        <h2>Recent Orders</h2>
+    <!-- Main Content -->
+    <main class="admin-content">
+      <div class="admin-header">
+        <h1>Orders</h1>
+      </div>
+
+      <section class="admin-table">
         <table>
+          <thead>
           <tr>
             <th>Order ID</th>
-            <th>Customer</th>
-            <th>Total</th>
+            <th>Customer Name</th>
+            <th>Date</th>
+            <th>Total Amount (RM)</th>
             <th>Status</th>
+            <th>Action</th>
           </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>#1001</td>
+            <td>Jane Doe</td>
+            <td>2024-06-15</td>
+            <td>75.00</td>
+            <td>Pending</td>
+            <td>
+              <button class="btn-view">View</button>
+              <button class="btn-update">Update</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#1002</td>
+            <td>John Smith</td>
+            <td>2024-06-14</td>
+            <td>45.00</td>
+            <td>Completed</td>
+            <td>
+              <button class="btn-view">View</button>
+              <button class="btn-update">Update</button>
+            </td>
+          </tr>  
+          </tbody>
         </table>
-        <button class="btn-view-all">View All Orders</button>
       </section>
-      
 
-    </main>
-
-</body>
+       <!-- Linking Custom JS -->
+      <script src="admin.js"></script>
+     </main> 
+    </body>
+</html> 
