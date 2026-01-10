@@ -157,6 +157,29 @@
           </form>
       </div>
       </div>
+
+      <!-- Order Update Status Modal -->
+      <div id="updateOrderModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Update Order Status</h2>
+
+          <form id="updateOrderForm">
+            <p><strong>Order ID:</strong> <span id="updateModalOrderID"></span></p>
+
+            <label for="orderStatusSelect">Status:</label>
+            <select id="orderStatusSelect" required>
+              <option value="Pending">Pending</option>
+              <option value="Processing">Processing</option>
+              <option value="Completed">Completed</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+
+            <button type="submit" class="btn-update">Save</button>
+          </form>
+        </div>
+      </div>
+
       </section>
 
     </main>

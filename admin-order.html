@@ -33,7 +33,7 @@
       </nav>
     </header>
 
-    <!-- Order Cards -->
+    <!-- Order Cards 
       <section class="dashboard-cards">
         <div class="card">
           <p>Total Products</p>
@@ -51,7 +51,7 @@
           <p>Pending Orders</p>
           <h2>3</h2>
         </div>
-      </section>
+      </section>-->
 
     <!-- Main Content -->
     <main class="admin-content">
@@ -97,6 +97,46 @@
           </tbody>
         </table>
       </section>
+
+      <!-- Order View Modal -->
+      <div id="orderModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Order Details</h2>
+
+          <div class="order-info">
+            <p><strong>Order ID:</strong> <span id="modalOrderID"></span></p>
+            <p><strong>Customer Name:</strong> <span id="modalCustomerName"></span></p>
+            <p><strong>Date:</strong> <span id="modalOrderDate"></span></p>
+            <p><strong>Total Amount:</strong> RM <span id="modalTotalAmount"></span></p>
+            <p><strong>Status:</strong> <span id="modalOrderStatus"></span></p>
+          </div>
+
+          <button id="btnCloseOrderModal" class="btn-close">Close</button>
+        </div>
+      </div>
+
+      <!-- Order Update Status Modal -->
+      <div id="updateOrderModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Update Order Status</h2>
+        <form id="updateOrderForm">
+          <p>Order ID: <span id="updateModalOrderID"></span></p>
+          <label>Status:</label>
+          <select id="orderStatusSelect">
+            <option value="Pending">Pending</option>
+            <option value="Processing">Processing</option>
+            <option value="Ready for Pickup">Ready for Pickup</option>
+            <option value="Out for Delivery">Out for Delivery</option>
+            <option value="Completed">Completed</option>
+            <option value="Cancelled">Cancelled</option>
+          </select>
+          <button class="submit">Update Status</button>
+        </form>
+      </div>
+      </div>
+      
 
        <!-- Linking Custom JS -->
       <script src="admin.js"></script>

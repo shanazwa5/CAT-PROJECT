@@ -95,41 +95,6 @@ header .navbar {
   color: var(--primary-color);
 }
 
-
-/*Right Bar Styling
-.admin-sidebar {
-  width: 250px;              
-  background: #3b141c;       
-  color: #fff;
-  padding: 30px 20px;
-}
-
-.admin-sidebar .logo {
-  font-size: 24px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.admin-sidebar ul {
-  list-style: none;
-}
-
-.admin-sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.admin-sidebar ul li a:hover {
-  background: #f3961c;
-  color: #3b141c;
-}*/
-
 /*Main Styling*/
 .admin-content {
   flex: 1;                    
@@ -328,5 +293,148 @@ header .navbar {
 
 .btn-view-all:hover {
   background: var(--primary-color);
+  color: var(--white-color);
+}
+
+/*Order Page Styling*/
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table table th,
+.order-table table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #0f0d0d;
+  vertical-align: middle;
+}   
+
+.order-table table th {
+  background-color: #3b141c;
+  color: #ffffff;
+}
+
+.admin-table .btn-view {
+  background: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--border-radius-m);
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.btn-update {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: var(--border-radius-m);
+}
+
+.admin-table .btn-view:hover {
+  background: var(--primary-color);
+}
+
+.admin-table .btn-update:hover {
+  background: var(--primary-color);
+}
+
+/* Modal base styling (reuse product modal) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#btnCloseOrderModal {
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#btnCloseOrderModal:hover {
+  background-color: #45a049;
+}
+
+/*Update Modal Styling*/
+#updateOrderModal .modal-content {
+  width: 350px;
+}
+
+#updateOrderModal form {
+  margin-top: 15px;
+}
+
+#orderStatusSelect {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-close {
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background-color: #45a049;
+}
+
+.submit {
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
