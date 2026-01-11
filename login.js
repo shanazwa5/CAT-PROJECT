@@ -6,7 +6,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
 
   if(username === "admin" && password === "1234") {
     alert("Login successful!");
-    window.location.href = "admin-dashboard.html"; // redirect
+    window.location.href = "admin_dashboard.jsp"; // redirect
   } else {
     alert("Invalid username or password");
   }

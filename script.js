@@ -1,71 +1,46 @@
-const navLinks = document.querySelectorAll(".nav-menu .nav-link");
+// ================================
+// NAVBAR (SAFE)
+// ================================
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
+const navLinks = document.querySelectorAll(".nav-menu .nav-link");
 
-menuOpenButton.addEventListener("click", () => {
-  //Toggle mobile menu visibility
-  document.body.classList.toggle("show-mobile-menu");
-});
+if (menuOpenButton && menuCloseButton) {
+    menuOpenButton.addEventListener("click", () => {
+        document.body.classList.toggle("show-mobile-menu");
+    });
 
-// Close mobile menu when close button is clicked
-menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+    menuCloseButton.addEventListener("click", () => {
+        document.body.classList.remove("show-mobile-menu");
+    });
 
-//Close mobile menu when any nav link is clicked
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => menuOpenButton.click());
-});
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            document.body.classList.remove("show-mobile-menu");
+        });
+    });
+}
 
-
-//Initialize Swiper
-const swiper = new Swiper('.slider-wrapper', {
-  loop: true,
-  spaceBetween: 25,
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
-
-//Search and Filter Functionz
-
-// Customize function
-const addToCartBtn = document.querySelector(".btn");
-
-addToCartBtn.addEventListener("click", () => {
-  const cakeName = document.querySelector(".cake-name").textContent;
-  const size = document.querySelector("#size").value;
-  const decorations = document.querySelector("#decorations").value;
-  const candles = document.querySelector("#candles").value;
-  const message = document.querySelector("#message").value;
-
-  const cartItem = {
-    cakeName,
-    size,
-    decorations,
-    candles,
-    message
-  };
-
-  console.log("Added to cart:", cartItem);
-  alert(`${cakeName} added to cart!`);
-});
+// ================================
+// SWIPER (SAFE)
+// ================================
+if (typeof Swiper !== "undefined") {
+    new Swiper(".slider-wrapper", {
+        loop: true,
+        spaceBetween: 25,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+        },
+    });
+}
