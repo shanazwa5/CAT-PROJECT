@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="stylesheet" href="login.css"> 
+  </head> 
+  <body>
+  <div class="login-page">
+    <h2 class="login-title">Admin Login</h2>
+    <form id="loginForm" class="login-box">
+      <div class="imgcontainer">
+        <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" class="cancelbtn" onclick="window.location.href='index.html'">Cancel</button>
+      </div>
+      <div class="forgot-container">
+        <span class="psw"><a href="#" onclick="alert('Password successfully reset. Can login with new password.'); return false;">Forgot password?</a></span>
+      </div>
+    </form>
+  </div>
+</body>
+
+<script src="login.js"></script>
+</html>
