@@ -1,40 +1,30 @@
-// Fetch 3 latest reviews from Oracle APEX
+// home-review.js
 
 // Target UL inside testimonial section
 const swiperWrapper = document.getElementById('home-review-slider');
 
-// Oracle APEX REST API (order by latest date)
-const apiUrl = 'https://oracleapex.com/ords/my_workhuu/review/reviews_by_date';
-
-fetch(apiUrl)
+fetch('http://localhost:3000/api/reviews')
   .then(response => response.json())
   .then(data => {
-    // APEX returns data in items[]
-    const reviews = data.items;
-
-    // Take only 3 latest reviews
-    const homeReviews = reviews.slice(0, 3);
-
-    // Clear existing content
+    // Clear existing dummy content
     swiperWrapper.innerHTML = '';
 
-    // Insert reviews into slider
-    homeReviews.forEach(review => {
+    data.forEach(review => {
       const li = document.createElement('li');
       li.className = 'testimonial swiper-slide';
 
-      li.innerHTML = 
+      li.innerHTML = `
         <div class="review-card">
           <h3 class="name">${review.customer_name}</h3>
           <p class="rating">Rating: ${review.rating} ⭐</p>
           <i class="feedback">"${review.review_comment}"</i>
         </div>
-      ;
+      `;
 
       swiperWrapper.appendChild(li);
     });
 
-    // Initialize Swiper AFTER data loaded
+    // Initialize Swiper AFTER reviews loaded
     new Swiper('.swiper', {
       loop: true,
       pagination: {
