@@ -890,11 +890,65 @@ body {
 }
 
 .footer-section {
- position: fixed;
-  left: 0;
-  bottom: 0;
+  background: var(--primary-color);
+  padding: 10px 0;
   width: 100%;
-  background-color: var(--primary-color);
-  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*Track Order Page Styling*/
+
+.track-order-section {
+  min-height: 100vh;
+  background-image: url("images/TrackOrder.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.track-order-section h2 {
   text-align: center;
 }
+
+.track-order-box {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 8px 15px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-summary {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+}
+

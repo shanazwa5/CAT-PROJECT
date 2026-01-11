@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset = "UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Track Order</title> 
+    <!-- Linking Font Awesome for icons -->
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <!--Linking Swiper CSS -->
+    <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css"> 
+  </head> 
+<body>
+  <!--Header / NavBar -->
+    <header> 
+      <nav class="navbar section-content"> 
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">🍰 SweetBite</h2>
+        </a>
+        <ul class="nav-menu"> 
+            <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item"> 
+            <a href="index.html#home" class="nav-link">Home</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="index.html#about" class="nav-link">About Us</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="index.html#menu" class="nav-link">Menu</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="index.html#testimonials" class="nav-link">Testimonials</a> 
+          </li> 
+          <li class="nav-item"> 
+            <a href="index.html#contact" class="nav-link">Contact</a> 
+          </li>
+        </ul>
+
+        <div class="nav-search-filter">
+          <!-- Search Bar -->
+          <input type="text" id="searchInput" placeholder="Search menu...">
+    
+          <!-- Filter Dropdown -->
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="cake">Cake</option>
+            <option value="pastry">Pastry</option>
+          </select>
+        </div>  
+
+        <div class="nav-action">
+          <a href="YourCart.html" class="fas fa-shopping-cart"></a>
+          <a href="login.html" class="fas fa-user"></a>
+          <button id="menu-open-button" class="fas fa-bars"></button>
+        </div>
+      </nav> 
+    </header> 
+
+  <main>
+    <section class="track-order-section">
+      <div class="section-content">
+        <h2>Track Your Order</h2>
+        <form id="trackForm">
+          <label for="orderId">Order ID:</label>
+          <input type="text" id="orderId" placeholder="Enter your Order ID">
+          <button type="submit">Track</button>
+        </form>
+
+        <!-- Order summary -->
+        <div class="order-summary" id="orderSummary" style="display:none;">
+          <h3>Order #<span id="summaryOrderId"></span></h3>
+          <p>Date: <span id="summaryDate"></span></p>
+          <p>Delivery Type: <span id="summaryType"></span></p>
+          <h4>Status</h4>
+          <p id="summaryStatus"></p> 
+        </div>
+      </div>
+    </section>
+
+  <script src="track.js"></script>
+</body>
+</html>

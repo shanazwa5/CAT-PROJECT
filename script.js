@@ -69,4 +69,3 @@ addToCartBtn.addEventListener("click", () => {
   console.log("Added to cart:", cartItem);
   alert(`${cakeName} added to cart!`);
 });
-
