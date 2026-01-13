@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
           href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/sweetbite/css/style.css">
 </head>
 
 <body>
@@ -108,6 +109,24 @@
                         <i class="feedback">"Fast service and delicious."</i>
                     </li>
 
+                    <li class="testimonial swiper-slide">
+                        <img src="images/Customer-3.jpg" class="User-image">
+                        <h3 class="name">Rosie Park</h3>
+                        <i class="feedback">"Love the cake soo much i will repeat order."</i>
+                    </li>
+
+                    <li class="testimonial swiper-slide">
+                        <img src="images/Customer-4.jpg" class="User-image">
+                        <h3 class="name">James Thomas</h3>
+                        <i class="feedback">"My girlfriend love the cake so much. Thanks SweetBite."</i>
+                    </li>
+
+                    <li class="testimonial swiper-slide">
+                        <img src="images/Customer-5.jpg" class="User-image">
+                        <h3 class="name">Martin Jacob</h3>
+                        <i class="feedback">"Suppose to be the best cake store in the town."</i>
+                    </li>
+
                 </ul>
 
                 <div class="swiper-pagination"></div>
@@ -155,6 +174,12 @@
         <p class="copyright-text">
             &copy; 2024 SweetBite. All rights reserved.
         </p>
+    </div>
+
+    <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
 </footer>
 
