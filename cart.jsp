@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="util.DBConnection" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,7 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/sweetbite/css/style.css">
 </head>
 
 <body>
@@ -18,17 +19,21 @@
 <!-- HEADER -->
 <header>
     <nav class="navbar section-content">
-        <a href="#" class="nav-logo">
+        <a href="index.jsp" class="nav-logo">
             <h2 class="logo-text">🍰 SweetBite</h2>
         </a>
 
         <ul class="nav-menu">
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="menus.jsp">Menu</a></li>
+            <li class="nav-item"><a href="index.jsp#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.jsp#about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="menus.jsp" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="index.jsp#testimonials" class="nav-link">Testimonials</a></li>
+            <li class="nav-item"><a href="index.jsp#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-action">
             <a href="cart.jsp" class="fas fa-shopping-cart"></a>
+            <a href="admin_login.jsp" class="fas fa-user"></a>
         </div>
     </nav>
 </header>
@@ -65,7 +70,7 @@
         conn = DBConnection.getConnection();
 
         String sql =
-            "SELECT c.CART_ID, c.SIZE, c.QUANTITY, c.UNIT_PRICE, " +
+            "SELECT c.CART_ID, c.PRODUCT_SIZE, c.QUANTITY, c.UNIT_PRICE, " +
             "p.NAME, p.IMAGE_URL " +
             "FROM CART c " +
             "JOIN PRODUCTS p ON c.PRODUCT_ID = p.PRODUCT_ID " +
@@ -79,9 +84,9 @@
             hasItem = true;
 
             int cartId = rs.getInt("CART_ID");
+            String size = rs.getString("PRODUCT_SIZE");
             String productName = rs.getString("NAME");
             String image = rs.getString("IMAGE_URL");
-            String size = rs.getString("SIZE");
             int qty = rs.getInt("QUANTITY");
             double price = rs.getDouble("UNIT_PRICE");
 
@@ -93,12 +98,12 @@
     <td><%= count++ %></td>
 
     <td>
-        <img src="<%= image %>" alt="<%= productName %>" width="80">
+        <img src="/sweetbite/images/<%= image %>" alt="<%= productName %>" width="80">
         <br>
         <%= productName %>
     </td>
 
-    <td>Size: <%= size %></td>
+    <td>-</td>
     <td><%= qty %></td>
 
     <td>RM <%= String.format("%.2f", subtotal) %></td>
@@ -143,7 +148,7 @@
 
 <% if (hasItem) { %>
 <form action="checkout.jsp" method="get">
-    <button type="submit">Proceed to Checkout</button>
+    <button class="checkout" type="submit">Proceed to Checkout</button>
 </form>
 <% } %>
 
@@ -154,6 +159,12 @@
 
 <footer class="footer-section">
     <p>&copy; 2024 SweetBite</p>
+
+    <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
 </footer>
 
 </div>
