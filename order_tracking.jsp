@@ -1,6 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="util.DBConnection" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/sweetbite/css/style.css">
 </head>
 
 <body>
@@ -47,7 +48,6 @@
 <h2>Track Your Order</h2>
 
 <%
-    HttpSession session = request.getSession();
     String sessionId = session.getId();
 
     try {
@@ -81,6 +81,7 @@
     <p class="order-status">
         <strong><%= rs.getString("ORDER_STATUS") %></strong>
     </p>
+    <button onclick="window.location.href='index.jsp'" class="track-btn">Back to Home</button>
 </div>
 
 <%
@@ -105,6 +106,7 @@
     }
 %>
 
+
 </div>
 </section>
 </main>
@@ -115,6 +117,12 @@
         <p class="copyright-text">
             &copy; 2024 SweetBite. All rights reserved.
         </p>
+    </div>
+
+    <div class="social-link-list">
+              <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
 </footer>
 
